@@ -11,3 +11,5 @@ services:
       PROXY_ADDRESS_FORWARDING: "true"
   reverseproxy:
     bild: ./sample-app
+    ports:
+      - 8081:8081
