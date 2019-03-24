@@ -10,6 +10,6 @@ services:
       KEYCLOAK_PASSWORD: admin
       PROXY_ADDRESS_FORWARDING: "true"
   reverseproxy:
-    bild: ./sample-app
+    build: ./sample-app
     ports:
       - 8081:8081
