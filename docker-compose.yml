@@ -1,15 +1,17 @@
 version: '3'
 services:
+  relying_party:
+    build: ./relying_party
+    ports:
+      - 80:80
+    depends_on:
+      - keycloak
   keycloak:
-    image: jboss/keycloak 
-    restart: always
+    build: ./keycloak
     ports:
-      - "8080:8080"
+      - 8080:8080
     environment:
-      KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
+#      KEYCLOAK_USER: admin
+#      KEYCLOAK_PASSWORD: password
       PROXY_ADDRESS_FORWARDING: "true"
-  rp:
-    build: ./sample-app
-    ports:
-      - "8081:8081"
+      

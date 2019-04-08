@@ -1,5 +1,12 @@
 # keycloak-oidc-compose
 
-## link
-https://www.baeldung.com/spring-boot-keycloak  
-https://qiita.com/tamura__246/items/4290a1035e1adcab733b
+## Usage
+
+### Local
+1. Add below in hosts file.
+```
+127.0.0.1 keycloak
+```
+2. Acccess to ``http://localhost/private`` .
+
+3. Input user name (user) and password (password) .
