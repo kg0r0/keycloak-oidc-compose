@@ -1,4 +1,9 @@
 # keycloak-oidc-compose
+## RUN
+```
+$ docker-compose build
+$ docker-compose up -d
+```
 
 ## Usage
 
@@ -9,4 +14,15 @@
 ```
 2. Acccess to ``http://localhost/private`` .
 
-3. Input user name (user) and password (password) .
+3. Input user name and password.
+
+## Info
+### master realm
+|user name  |password  |
+|---|---|
+|admin  |password  |
+
+### demo realm
+|user name  |password  |
+|---|---|
+|user  |password  |
