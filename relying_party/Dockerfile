@@ -27,7 +27,4 @@ COPY index.html /var/www/html/private
 
 EXPOSE 80
 
-COPY docker-entrypoint.sh /opt/
-RUN chmod -v +x /opt/docker-entrypoint.sh
-
-ENTRYPOINT [ "/opt/docker-entrypoint.sh" ]
+CMD exec /usr/sbin/httpd -DFOREGROUND
