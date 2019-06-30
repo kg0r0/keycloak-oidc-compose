@@ -9,6 +9,7 @@ ENV HTTPD_VERSION=2.4.6-88.el7.centos \
 RUN set -x \
   && yum install -y iproute \
   && yum install -y httpd-${HTTPD_VERSION} \
+  && yum install -y php \
   && yum clean all 
 
 RUN mkdir -p /tmp/work \
@@ -23,7 +24,7 @@ RUN mkdir -p /tmp/work \
 RUN ln -sf /dev/stdout /var/log/httpd/access_log && ln -sf /dev/stderr /var/log/httpd/error_log
 
 COPY httpd.conf /etc/httpd/conf/httpd.conf
-COPY index.html /var/www/html/private
+COPY index.php /var/www/html/private/index.php
 
 EXPOSE 80
 
