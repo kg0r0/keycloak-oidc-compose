@@ -27,7 +27,7 @@ $ docker-compose up -d
 |---|---|
 |user  |password  |
 
-### Note
+## Note
 In a real OAuth application, it's a terrible idea to display the access token like this since it's a secret value that the client is supposed to be protecting.  
 In our demo, this helps us visualize what's happening, so we'll do this terrible security practice.
 
